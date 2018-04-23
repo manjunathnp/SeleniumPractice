@@ -13,7 +13,7 @@ public class LoginLogout
 	{
 		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(100000, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Chrome Browser Launched Successfully!");
 		
 		driver.manage().window().maximize();
