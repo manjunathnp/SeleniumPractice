@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Google Search Test">
+	<test name="Google Search Field Test">
+
+		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://google.com" />
+		<parameter name="toSearch" value="Selenium WebDriver" />
+
+		<classes>
+			<class name="com.parameters.GoogleSearchTest" />
+		</classes>
+
+	</test>
+</suite>
