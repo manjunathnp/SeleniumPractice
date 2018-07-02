@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.parameters.GoogleSearchTest">
+      <class name="com.seleniumpractice.WindowResize">
         <methods>
-          <include name="googleTestSearch"/>
+          <include name="resizeWindow"/>
         </methods>
-      </class> <!-- com.parameters.GoogleSearchTest -->
+      </class> <!-- com.seleniumpractice.WindowResize -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

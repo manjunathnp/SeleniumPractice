@@ -10,12 +10,13 @@ public class ChromePlayAround
 	{
 		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		
 		System.out.println("Chrome Browser Launched Successfully!");
 		
 		driver.manage().window().maximize();
 		
 		//Launch Google
-		driver.get("https://google.com");
+		driver.get("htt://google.com");
 		System.out.println("Navigated to Google Successfully!");
 		
 		//Site Title

@@ -2,33 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Google Search Test" duration-ms="60768" started-at="2018-07-01T11:15:02Z" finished-at="2018-07-01T11:16:02Z">
+  <suite name="Default suite" duration-ms="24141" started-at="2018-07-02T07:50:17Z" finished-at="2018-07-02T07:50:41Z">
     <groups>
     </groups>
-    <test name="Google Search Field Test" duration-ms="60768" started-at="2018-07-01T11:15:02Z" finished-at="2018-07-01T11:16:02Z">
-      <class name="com.parameters.GoogleSearchTest">
-        <test-method status="PASS" signature="googleTestSearch(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.parameters.GoogleSearchTest@2f8f11]" name="googleTestSearch" duration-ms="60737" started-at="2018-07-01T11:15:02Z" finished-at="2018-07-01T11:16:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://google.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Selenium WebDriver]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="24141" started-at="2018-07-02T07:50:17Z" finished-at="2018-07-02T07:50:41Z">
+      <class name="com.seleniumpractice.SelectValues">
+        <test-method status="PASS" signature="selectValueFromDropDown()[pri:0, instance:com.seleniumpractice.SelectValues@1275dab]" name="selectValueFromDropDown" duration-ms="24088" started-at="2018-07-02T07:50:17Z" finished-at="2018-07-02T07:50:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- googleTestSearch -->
-      </class> <!-- com.parameters.GoogleSearchTest -->
-    </test> <!-- Google Search Field Test -->
-  </suite> <!-- Google Search Test -->
+        </test-method> <!-- selectValueFromDropDown -->
+      </class> <!-- com.seleniumpractice.SelectValues -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
