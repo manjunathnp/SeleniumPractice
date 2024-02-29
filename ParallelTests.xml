@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" parallel="tests" thread-count="3"
+          name="/Users/manjunathnp/IdeaProjects/SeleniumPractice/src/test/java/com/testNGPract/ParallelTest1.java">
+        <classes>
+            <class name="com.testNGPract.ParallelTest1"/>
+            <class name="com.testNGPract.ParallelTest2"/>
+        </classes>
+    </test>
+</suite>

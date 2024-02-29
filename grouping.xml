@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/manjunathnp/IdeaProjects/SeleniumPractice/src/test/java/com/testNGPract/GroupingsDemo.java">
+        <parameter name="username" value="user1"/>
+        <parameter name="password" value="pass1"/>
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <include name="regression"/>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testNGPract.GroupingsDemo">
+
+                <!--<methods>
+                    <include name="testA"/>
+                    <include name="testB"/>
+                    <include name="testC"/>
+                    <include name="testD"/>
+                    <include name="testE"/>
+                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>

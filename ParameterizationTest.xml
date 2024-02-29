@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/manjunathnp/IdeaProjects/SeleniumPractice/src/test/java/com/testNGPract/ParameterizationTest.java">
+        <parameter name="username" value="user1"/>
+        <parameter name="password" value="pass1"/>
+        <parameter name="username2" value="user2"/>
+        <parameter name="password2" value="pass2"/>
+        <classes>
+            <class name="com.testNGPract.ParameterizationTest">
+                <!--<methods>
+                    <include name="loginTest"/>
+                    <include name="loginTest2"/>
+                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>
