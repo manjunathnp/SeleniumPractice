@@ -5,7 +5,6 @@ import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
@@ -17,7 +16,7 @@ public class HandleWindows{
     public WebDriver driver;
     ChromeOptions chromeOptions=new ChromeOptions();
 
-    //@Test
+    @Test
     public void switchWindows(){
         chromeOptions.addArguments("--ignore-notifications");
         chromeOptions.addArguments("--headless");
@@ -45,7 +44,7 @@ public class HandleWindows{
 
     }
 
-    //@Test
+    @Test
     public void switchTabs(){
         chromeOptions.addArguments("--ignore-notifications");
         //chromeOptions.addArguments("--headless");
@@ -69,16 +68,6 @@ public class HandleWindows{
         System.out.println("Child Tab: "+driver.getTitle());
         driver.switchTo().window(parentWindowID);
         System.out.println("Parent Window: "+driver.getTitle());
-    }
-
-    @Test
-    public void switchTabsWindows(){
-        driver = new ChromeDriver();
-        driver.switchTo().newWindow(WindowType.TAB);
-        driver.get("https://askomdch.com/");
-
-        driver.switchTo().newWindow(WindowType.WINDOW).get("https://askomdch.com/");
-        driver.quit();
     }
 
 }
