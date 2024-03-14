@@ -10,6 +10,8 @@ public class LaunchBrowswer2 extends TestBase {
         driver.navigate().to("https://saucedemo.com/");
         System.out.println("Title of WebPage: "+driver.getTitle());
 
+
+
     }
 
 }
