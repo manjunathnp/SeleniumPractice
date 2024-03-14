@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class captureScreenshot extends TestBase {
 
@@ -27,11 +29,12 @@ public class captureScreenshot extends TestBase {
 
     @Test
     public void screenshotPractice() throws IOException {
+        String dateTime = new SimpleDateFormat("dd-mm-YYYY_HH-mm").format(new Date());
         driver.get("https://demo.nopcommerce.com/");
 
         TakesScreenshot ts = (TakesScreenshot) driver;
         File srcFile = ts.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("test.png");
+        File destFile = new File("ScreenshotsDir"+File.separator+"test_"+dateTime+".png");
         FileUtils.copyFile(srcFile, destFile);
     }
 }
