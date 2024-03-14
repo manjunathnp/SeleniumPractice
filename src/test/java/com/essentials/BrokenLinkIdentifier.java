@@ -15,7 +15,7 @@ public class BrokenLinkIdentifier {
         WebDriver driver = new ChromeDriver();
 
         // Navigate to the website
-        driver.get("https://www.askomdch.com");
+        driver.get("https://parabank.parasoft.com/parabank/admin.htm");
 
         // Find all links on the page
         List<WebElement> links = driver.findElements(By.tagName("a"));
