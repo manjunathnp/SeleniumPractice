@@ -30,7 +30,5 @@ public class InputText extends TestBase {
         Thread.sleep(3000);
         // Clicking the login button using JavaScriptExecutor
         js.executeScript("arguments[0].click();", loginBtn);*/
-
-
     }
 }
