@@ -34,7 +34,7 @@ public class TestBase {
 
 
 
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().clearDriverCache().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -61,8 +61,8 @@ public class TestBase {
 
     public void fluentElementClick(WebElement element){
         FluentWait<WebDriver> fluentWait = new FluentWait<>(driver).
-                        withTimeout(Duration.ofSeconds(10)).
-                        pollingEvery(Duration.ofSeconds(5)).
+                        withTimeout(Duration.ofSeconds(30)).
+                        pollingEvery(Duration.ofSeconds(6)).
                         ignoring(NoSuchElementException.class);
         fluentWait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }

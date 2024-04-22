@@ -29,7 +29,7 @@ public class captureScreenshot extends TestBase {
 
     @Test
     public void screenshotPractice() throws IOException {
-        String dateTime = new SimpleDateFormat("dd-mm-YYYY_HH-mm").format(new Date());
+        String dateTime = new SimpleDateFormat("dd-mm-yyyy_hh-mm").format(new Date());
         driver.get("https://demo.nopcommerce.com/");
 
         TakesScreenshot ts = (TakesScreenshot) driver;

@@ -31,4 +31,16 @@ public class InputText extends TestBase {
         // Clicking the login button using JavaScriptExecutor
         js.executeScript("arguments[0].click();", loginBtn);*/
     }
+
+    @Test
+    public void jsValidation(){
+        WebElement usernameTxtFld = driver.findElement(By.id("user-name"));
+        WebElement passwordTxtFld = driver.findElement(By.id("password"));
+        WebElement loginBtn = driver.findElement(By.id("login-button"));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value=arguments[1]", usernameTxtFld, "tester");
+        js.executeScript("arguments[0].value=arguments[1]", passwordTxtFld, "testing");
+        js.executeScript("arguments[0].click()", loginBtn);
+    }
 }

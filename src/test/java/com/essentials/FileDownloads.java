@@ -15,8 +15,9 @@ public class FileDownloads{
     ChromeOptions chromeOptions=new ChromeOptions();
     @Test
     public void validateFileDownload(){
-        driver = new ChromeDriver(chromeOptions);
         chromeOptions.addArguments("download.default_directory=/Users/manjunathnp/Downloads");
+        driver = new ChromeDriver(chromeOptions);
+
         driver.get("https://the-internet.herokuapp.com/download");
         driver.findElement(By.xpath("//a[normalize-space()='test-file.txt']")).click();
 

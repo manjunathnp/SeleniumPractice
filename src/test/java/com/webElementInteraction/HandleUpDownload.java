@@ -32,7 +32,7 @@ public class HandleUpDownload extends TestBase {
         downloadableFile.click();
         Thread.sleep(3000);
 
-        File downaloadedFile = new File("/Users/manjunathnp/Downloads/", "LambdaTest.txt");
+        File downaloadedFile = new File("/Users/manjunathnp/Downloads/", "LambdaTest*.txt");
         if(downaloadedFile.exists())
         {
             System.out.println("File download Successful!");
