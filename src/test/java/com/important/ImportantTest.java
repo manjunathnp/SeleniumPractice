@@ -105,7 +105,7 @@ public class ImportantTest extends TestBase {
         js.executeScript("arguments[0].style.visibility='visible';", element);
 
         //set attribute value
-        js.executeScript("arguments[0].setAttribute('value','newValue');", element);
+        js.executeScript("arguments[0].setAttribute('attributeName','newValue');", element);
 
         //scroll window
         js.executeScript("window.scrollBy(0, -500)"); //up
