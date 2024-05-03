@@ -131,4 +131,15 @@ public class ImportantTest extends TestBase {
         File downloadedFile = new File(downloadedPath+File.separator+downloadedFileName+"*.txt");
         Assert.assertTrue(downloadedFile.exists());
     }
+
+    @Test
+        public void fileDownloadValidationTest(){
+        driver.get("https://the-internet.herokuapp.com/download");
+        driver.findElement(By.linkText("SomeFile.txt")).click();
+
+        String downloadedPath = "/Users/manjunathnp/Downloads/";
+        String downloadedFileName = "SomeFile.txt";
+        File downloadedFile = new File(downloadedPath+downloadedFileName);
+        Assert.assertTrue(downloadedFile.exists(), "No Such File");
+    }
 }
