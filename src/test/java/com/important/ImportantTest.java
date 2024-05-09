@@ -16,7 +16,9 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 public class ImportantTest extends TestBase {
@@ -141,5 +143,43 @@ public class ImportantTest extends TestBase {
         String downloadedFileName = "SomeFile.txt";
         File downloadedFile = new File(downloadedPath+downloadedFileName);
         Assert.assertTrue(downloadedFile.exists(), "No Such File");
+    }
+
+    @Test
+    public void currentDateTimestamp(){
+        String currentDateTime = new SimpleDateFormat("dd-MMM-YYYY__hh:mm_a").format(new Date());
+        System.out.println(currentDateTime);
+    }
+
+    @Test
+    public void switchToPopupWindows(){
+        driver.get("https://the-internet.herokuapp.com/windows");
+        System.out.println("Parent Window Title: "+driver.getTitle());
+
+        driver.findElement(By.linkText("Click Here")).click();
+        String parentWindowID = driver.getWindowHandle();
+
+        for(String windowID: driver.getWindowHandles()){
+            if(!windowID.equals(parentWindowID)){
+                driver.switchTo().window(windowID);
+            }
+        }
+        System.out.println("Child Window Title: "+driver.getTitle());
+        driver.switchTo().window(parentWindowID);
+        System.out.println("Parent Window Title: "+driver.getTitle());
+    }
+
+    @Test
+    public void tabNavigations(){
+        driver.get("https://askomdch.com");
+        System.out.println("Window 1: "+driver.getTitle());
+
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.get("https://www.saucedemo.com/");
+        System.out.println("Window 2: "+driver.getTitle());
+
+        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.get("https://the-internet.herokuapp.com/");
+        System.out.println("Window 2: "+driver.getTitle());
     }
 }
